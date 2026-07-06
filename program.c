@@ -8,20 +8,23 @@ Your program must first read an integer indicating the number of grades to be av
 int main(void)
 {
     int prosek = 0;
-    int ocena = 0;
-    int kolicinaOcena = 0;
-    int rezultat = 0;
-    scanf("%d", &kolicinaOcena);
-    for (kolicinaOcena; kolicinaOcena > 0; kolicinaOcena--)
+    int ocena;
+    int kolicinaOcena;
+    int i;
+    double rezultat;
+
+    scanf("%d", &i);
+    
+    for (kolicinaOcena = i; kolicinaOcena > 0; kolicinaOcena--)
     {
         /* code */
         scanf("%d", &ocena);
         prosek = prosek + ocena;
         printf("%d\n", prosek);
     }
-
-    rezultat = prosek / kolicinaOcena;
-    printf("%d\n", (int)rezultat);
+    rezultat =  (double)prosek / (double)i;
+    
+    printf("%lf\n", rezultat);
     
     return 0;
 }
